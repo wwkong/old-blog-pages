@@ -1,0 +1,5 @@
+*.exe
+etc/*
+images/*
+_cache/*
+_site/*
