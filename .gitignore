@@ -1,4 +1,5 @@
 *.exe
 etc/*
+*.gif
 _cache/*
 _site/*
