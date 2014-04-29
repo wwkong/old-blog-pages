@@ -44,3 +44,16 @@ del "%destdir%\*.*" /S /A /Q >nul
 for /f %%a in ('dir %destdir% /b /s /a:hd') do rd /s /q "%%a" >nul
 rd %destdir% >nul
 pause 
+
+6. Customize site.hs using a custom deployment string:
+	A) Define:
+		deployStr :: String
+		deployStr = unlines ["cd _site &",
+					   "git commit -m \"Deployed content using site deploy.\" &",
+					   "git push --progress origin master:master"]
+
+		config :: Configuration
+		config = defaultConfiguration { deployCommand = deployStr }
+	B) Modify the main function to use the config file:
+		main = hakyllWith config $ do
+			...
