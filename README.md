@@ -26,6 +26,7 @@
 
 @ECHO OFF
 SETLOCAL EnableDelayedExpansion
+if not exist "%CD%\temp" mkdir "%CD%\temp"
 set "sourcedir=%CD%\_site"
 set "destdir=%CD%\temp"
 if not exist "%destdir%\.git" mkdir "%destdir%\.git"
@@ -33,9 +34,12 @@ xcopy "%sourcedir%\.gitignore" %destdir% /s /Y >nul
 xcopy "%sourcedir%\README.md" %destdir% /s /Y >nul
 xcopy "%sourcedir%\.git" "%destdir%\.git" /s /Y /D >nul
 del %sourcedir%\*.* /s /F /Q >nul
-ghc --make -dynamic site.hs
+ghc --make -threaded site.hs
 site rebuild
 xcopy %destdir%  %sourcedir% /s /Y >nul
 mkdir "%sourcedir%\.git" >nul
 xcopy "%destdir%\.git" "%sourcedir%\.git" /s /Y /D >nul
+del "%destdir%\*.*" /S /A /Q >nul
+for /f %%a in ('dir %destdir% /b /s /a:hd') do rd /s /q "%%a" >nul
+rd %destdir% >nul
 pause 
