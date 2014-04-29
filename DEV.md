@@ -1,36 +1,37 @@
 Development Log
 =====
 
-1. Clean ghc packages in ~./User/AppData/Roaming/[Cabal | GHC] and the base uninstaller if packages are FUBAR  
-	A) Install haddock-2.13.2 (for ghc 7.6.3), ghc-mod, haskell-src-ext
+__1.__ Clean ghc packages in ~./User/AppData/Roaming/[Cabal | GHC] and the base uninstaller if packages are FUBAR   
 
-2. (Optional, but highly recommended [does not work in Windows]) Allow dynamic compilation of site.hs  
-	=> This reduces the size of the produced binary by ~99% and compile time by 80%  
-	A) To get cabal source and config files, open GHCi and use:
+* Install haddock-2.13.2 (for ghc 7.6.3), ghc-mod, haskell-src-ext
+
+__2.__ (Optional) Allow dynamic compilation of site.hs  
+
+* To get cabal source and config files, open GHCi and use:
 	
 ````haskell
 :m System.Directory
 getAppUserDataDirectory "cabal"
-````
+````  
 
-	B) Append "shared: true" to the config file in this directory  
-	C) Install the dynamic hakyll package using "cabal install --enable-shared hakyll"  
-	D) In Windows, there is currently no way to reference all necessary DLLs in the compiled binary
+* Append "shared: true" to the config file in this directory  
+* Install the dynamic hakyll package using "cabal install --enable-shared hakyll"
+* In Windows, there is currently no way to reference all necessary DLLs in the compiled binary
 
-3. Initialize site.exe using:  
-	A) hakyll-init site-name  
-	B) cd site-name  
-	C) ghc --make -threaded -dynamic site.hs  
-	D) site build  
-	E) site watch
+__3.__ Initialize site.exe using:  
+* hakyll-init site-name  
+* cd site-name  
+* ghc --make -threaded -dynamic site.hs  
+* site build
+* site watch
 	
-4. Preview by connecting to http://localhost:8000/
+__4.__ Preview by connecting to http://localhost:8000/
 
-5. Create and push a git repository to GitHub on the _site subdirectory  
-	A) Make sure the repo name is username.github.io  
-	B) This is then hosted on GitHub pages under the above repo name as the url
+__5.__ Create and push a git repository to GitHub on the _site subdirectory  
+* Make sure the repo name is username.github.io  
+* This is then hosted on GitHub pages under the above repo name as the url
 
-6. Write a batch script to deal with the "site rebuild" command which deletes _site subdirectory, which includes the .git resources:  
+__6.__ Write a batch script to deal with the "site rebuild" command which deletes _site subdirectory, which includes the .git resources:  
 
 ````bat
 @ECHO OFF  
@@ -54,7 +55,7 @@ rd %destdir% >nul
 pause
 ````
 
-7. Customize site.hs using a custom script:
+__7.__ Customize site.hs using a custom script:
 
 ````bat
 @ECHO OFF  
