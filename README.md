@@ -1,4 +1,5 @@
 0. Clean ghc packages in ~./User/AppData/Roaming/[Cabal | GHC] and the base uninstaller if packages are FUBAR
+	A) Install haddock-2.13.2 (for ghc 7.6.3), ghc-mod, haskell-src-ext
 
 0. (Optional, but highly recommended [does not work in Windows]) Allow dynamic compilation of site.hs 
 	=> This reduces the size of the produced binary by ~99% and compile time by 80%
