@@ -12,6 +12,7 @@ Development Log
 :m System.Directory
 getAppUserDataDirectory "cabal"
 ````
+
 	B) Append "shared: true" to the config file in this directory  
 	C) Install the dynamic hakyll package using "cabal install --enable-shared hakyll"  
 	D) In Windows, there is currently no way to reference all necessary DLLs in the compiled binary
