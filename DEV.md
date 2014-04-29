@@ -46,7 +46,7 @@ xcopy "%destdir%\.git" "%sourcedir%\.git" /s /Y /D >nul
 del "%destdir%\*.*" /S /A /Q >nul  
 for /f %%a in ('dir %destdir% /b /s /a:hd') do rd /s /q "%%a" >nul  
 rd %destdir% >nul  
-pause  
+pause
 
 7. Customize site.hs using a custom script:
 
@@ -56,4 +56,4 @@ cd "%CD%\_site"
 git add .  
 git commit -m "Deployed content using custom batch script."  
 git push --progress origin master:master  
-pause  
+pause
