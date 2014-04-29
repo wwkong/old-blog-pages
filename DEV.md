@@ -66,3 +66,12 @@ git commit -m "Deployed content using custom batch script."
 git push --progress origin master:master  
 pause
 ````
+
+__8.__ Add a script to preview website:
+
+````bat
+@ECHO OFF
+SETLOCAL EnableDelayedExpansion
+START chrome "http://localhost:8000/"
+site watch
+````
