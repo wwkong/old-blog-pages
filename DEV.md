@@ -30,7 +30,7 @@ getAppUserDataDirectory "cabal"
 
 6. Write a batch script to deal with the "site rebuild" command which deletes _site subdirectory, which includes the .git resources:  
 
-````batch
+````bat
 @ECHO OFF  
 SETLOCAL EnableDelayedExpansion  
 if not exist "%CD%\temp" mkdir "%CD%\temp"  
@@ -54,6 +54,7 @@ pause
 
 7. Customize site.hs using a custom script:
 
+````bat
 @ECHO OFF  
 SETLOCAL EnableDelayedExpansion  
 cd "%CD%\_site"  
@@ -61,3 +62,4 @@ git add .
 git commit -m "Deployed content using custom batch script."  
 git push --progress origin master:master  
 pause
+````
