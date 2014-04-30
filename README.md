@@ -1,2 +1,2 @@
-Controlled Stochasticism
+Personal Blog
 =====

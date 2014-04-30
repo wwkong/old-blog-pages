@@ -78,3 +78,5 @@ site watch
 
 __8.__ Customize site.hs with more routes and tags
 * A guide for tags can be found [here](http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html).
+
+__9.__ Modify post.html to display author name.
