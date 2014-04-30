@@ -76,18 +76,10 @@ START chrome "http://localhost:8000/"
 site watch
 ````
 
-__8.__ Customize site.hs with more routes and tags
+__8.__ Customize site.hs with more routes and tags:
 * A guide for tags can be found [here](http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html).
 
 __9.__ Modify post.html to display author name and description.
 
 __10.__ Add code for MathJax in the post.html template:
-
-````html
-<script type="text/x-mathjax-config"> 
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\ (','\\)']]}}); 
-</script> 
-<script type="text/javascript" 
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> 
-</script>
-````
+* Guides can be found [here](http://qnikst.github.io/posts/2013-02-04-hakyll-latex.html) and [here](http://www.dancingfrog.co.uk/posts/2013-09-05-adding-mathjax-to-hakyll).
