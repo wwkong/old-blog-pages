@@ -85,3 +85,5 @@ __10.__ Add code for MathJax in the post.html template:
 * Guides can be found [here](http://qnikst.github.io/posts/2013-02-04-hakyll-latex.html) and [here](http://www.dancingfrog.co.uk/posts/2013-09-05-adding-mathjax-to-hakyll).
 
 __11.__ Learn MathJax to Markdown syntax [here](http://meta.electronics.stackexchange.com/questions/434/test-the-new-latex-markdown-in-this-sandbox-question).
+
+__12.__ In the case of a lockdown of files in .git, kill the process TGitcache.exe
