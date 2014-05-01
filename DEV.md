@@ -87,3 +87,10 @@ __10.__ Add code for MathJax in the post.html template:
 __11.__ Learn MathJax to Markdown syntax [here](http://meta.electronics.stackexchange.com/questions/434/test-the-new-latex-markdown-in-this-sandbox-question).
 
 __12.__ In the case of a lockdown of files in .git, kill the process TGitcache.exe
+
+__13.__ When writing Markdown for Pandoc, the following characters need to be escaped:
+* Periods followed by a space: ". "
+* Ellipses: "..."
+* Percents: "%"
+* Quotation Marks: """
+* Any brackets
