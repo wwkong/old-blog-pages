@@ -94,3 +94,7 @@ __13.__ When writing Markdown for Pandoc, the following characters need to be es
 * Percents: "%"
 * Quotation Marks: """
 * Any brackets
+
+__14.__ Use media queries and the meta data below in your <head> under default.html to provide support for mobile devices:
+
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
