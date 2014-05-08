@@ -97,4 +97,18 @@ __13.__ When writing Markdown for Pandoc, the following characters need to be es
 
 __14.__ Use media queries and the meta data below in your <head> under default.html to provide support for mobile devices:
 
+````html
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
+````
+
+__15.__ Set UTF-8 Encoding using
+
+````haskell
+import GHC.IO.Encoding
+...
+main = do
+  setLocaleEncoding utf8
+  setFileSystemEncoding utf8
+  setForeignEncoding utf8
+  hakyllWith ...
+````
