@@ -112,3 +112,11 @@ main = do
   setForeignEncoding utf8
   hakyllWith ...
 ````
+
+__16.__ If using Sublime Text 3, disable ModuleInspector on startup by changing the default option to
+
+````
+"inspect_modules": false, 
+````
+
+under the SublimeHaskell package
