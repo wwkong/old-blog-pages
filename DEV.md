@@ -120,3 +120,5 @@ __16.__ If using Sublime Text 3, disable ModuleInspector on startup by changing 
 ````
 
 under the SublimeHaskell package
+
+__17.__ Install Sublime packages SublimeHaskell, SublimeREPL, SideBarEnhancements
